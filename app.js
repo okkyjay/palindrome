@@ -1,19 +1,13 @@
-function isPalindrome(str) {
-  const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-  const mid = Math.floor(cleanedStr.length / 2);
+"use strict"
 
-  for (let i = 0; i < mid; i++) {
-    if (cleanedStr[i] !== cleanedStr[cleanedStr.length - 1 - i]) {
-      return false;
-    }
-  }
-  return true;
-}
+function checkPalindrome() {
+  const word = "Able was I ere I saw Elba"
+  const newWord = word.split("");
+  const wordRev = newWord.reverse();
+  const finalWord = wordRev.join("");
 
-// Test
-const inputString1 = "racecar";
-console.log(isPalindrome(inputString1)); 
+  return finalWord === word 
+};
 
-const inputString2 = "hello";
-console.log(isPalindrome(inputString2)); 
+console.log(checkPalindrome());
 
